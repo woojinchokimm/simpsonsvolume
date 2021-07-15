@@ -70,16 +70,38 @@ root
 │   └──export_config.py
 ```
 
-## Usage
+## Input 
+
+The input is a collection of vtk anatomical (LV) meshes with node correspondence. The meta-data must include:
+  * the direction of the right ventricle (RV) or the location of the centre-of-mass (COM) of the RV (for A4C view acquisition)
+  * the vertex indices of the endo- and epicardium layers of the LV
+  * the vertex indices of the inner- and outer-rim of the LV base.
+ 
+**Note** If using our publicly available cohort, the RV directions are already built-in and require only the Orientations3D folder path in the `--rv_path` option.
+## Options
 
 The main script for generating data is `create_dataset.py`. Options are controlled at several different levels:
 
 1. **General options**: These options include parameters such as the location of the vtk mesh files and the output directory, which population to use, what view (slice) should be extracted, which Simpson's interpretation to use, number of Simpson's disks, and some additional parameters. An overview of these parameters can be seen by running `create_dataset.py -h` or looking at the argument parser defined in `export_config.py`.
-2. **Input**: The input is a collection of vtk anatomical (LV) meshes with node correspondence. The meta-data must include:
-  * the direction of the right ventricle (RV) or the location of the centre-of-mass (COM) of the RV (for A4C view acquisition)
-  * the vertex indices of the endo- and epicardium layers of the LV
-  * the vertex indices of the inner- and outer-rim of the LV base.
-3. **Data-specific options**: There may be cases where several parameters need to be defined for a given dataset. For example in each dataset, the endo- and epicardium apex node indices are fixed, but there are certain cases which need manual indexing or are excluded all-together. These parameters can be manually set in the `apex_nodes.py`, `apex_manual.py` and `anomaly.py`.
+2. **Data-specific options**: There may be cases where several parameters need to be defined for a given dataset. For example in each dataset, the endo- and epicardium apex node indices are fixed, but there are certain cases which need manual indexing or are excluded all-together. These parameters can be manually set in the `apex_nodes.txt`, `apex_manual.txt` and `anomaly.txt` files.
+
+## Run from terminal
+
+* To run the UKBB population with the apical-3 chamber view:
+`python D://simpsonsvolume_github//create_dataset.py --output_dir D:/simpsonsvolume_github/output/ --vtk_mesh_dir D:/simpsonsvolume_github/meshes/ --nodelabels_dir D:/phdcoding/LVMeshes/meta_data/ --rv_path D:/phdcoding/LVMeshes/CTData/DATA/Orientations3D/ --dataset_type UKBB --num_disks 20 --view_name a3ch --a4c_offset 20 --simpson_type 0 1 2 --ptsz_disp 2 --verbose --export_pkl`
+
+**Note** The output data is only saved when given `--export_pkl` option.
+
+* To run all 3 populations, with both apical-2 and 3 chamber views:
+`python D://simpsonsvolume_github//create_dataset.py --output_dir D:/simpsonsvolume_github/output/ --vtk_mesh_dir D:/simpsonsvolume_github/meshes/ --nodelabels_dir D:/phdcoding/LVMeshes/meta_data/ --rv_path D:/phdcoding/LVMeshes/CTData/DATA/Orientations3D/ --dataset_type UKBB YHC HFC --num_disks 20 --view_name a3ch a2ch --a4c_offset 20 --simpson_type 0 1 2 --ptsz_disp 2 --verbose --export_pkl`
+
+
+
+
+
+
+
+
 
 
 
