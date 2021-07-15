@@ -5,7 +5,7 @@
 * an adult population [UK Biobank Imaging Study](http://imaging.ukbiobank.ac.uk/)
 * a young population (preterm) 
 * an elderly heart failure population.
-<img src=docs/populations.png width="250">
+<img src=docs/populations.png width="1000">
 
 This project aims to estimate left ventricular volumes using 3 different interpretations of **Simpson's bi-plane rule (SBR)**:
 
