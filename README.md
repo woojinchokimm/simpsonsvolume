@@ -16,6 +16,12 @@ This project aims to estimate left ventricular volumes using 3 different interpr
 3. Simpson's disk formation
 4. Final volume calculation
 
+<p float="left">
+  <img src="docs/fig1A.png" width="100" />
+  <img src="docs/3methods2.png" width="100" /> 
+  <img src="docs/Table4.png" width="100" />
+</p>
+
 **Note** This repository only contains the code, not the imaging data. The meshes have been made publicly available here: dx.doi.org/10.6084/m9.figshare.14933463
 
 ## Installation
