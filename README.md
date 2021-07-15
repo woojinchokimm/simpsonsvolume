@@ -7,7 +7,7 @@
 * an elderly heart failure population.
 
 <p align="center">
-<img src=docs/populations.png width="750">
+<img src=docs/populations.png width="500">
 </p>
 
 This project aims to estimate left ventricular volumes using 3 different interpretations of **Simpson's bi-plane rule (SBR)**:
@@ -17,8 +17,8 @@ This project aims to estimate left ventricular volumes using 3 different interpr
 4. Final volume calculation
 
 <p align="center">
-  <img src="docs/fig1A.png" width="208" />
-  <img src="docs/3methods2.png" width="350" /> 
+  <img src="docs/fig1A.png" width="108" />
+  <img src="docs/3methods2.png" width="250" /> 
 </p>
 
 <p align="center">
