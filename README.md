@@ -95,19 +95,19 @@ The main script for generating data is `create_dataset.py`. Options are controll
 
 * To run the UKBB population with the apical-3 chamber view:
 
-`python D://simpsonsvolume_github//create_dataset.py --output_dir D:/simpsonsvolume_github/output/ --vtk_mesh_dir D:/simpsonsvolume_github/meshes/ --nodelabels_dir D:/phdcoding/LVMeshes/meta_data/ --rv_path D:/phdcoding/LVMeshes/CTData/DATA/Orientations3D/ --dataset_type UKBB --num_disks 20 --view_name a3ch --a4c_offset 20 --simpson_type 0 1 2 --ptsz_disp 2 --verbose --export_pkl`
+`python ../create_dataset.py --output_dir ../output/ --vtk_mesh_dir ../meshes/ --nodelabels_dir ../meta_data/ --rv_path ../Orientations3D/ --dataset_type UKBB --num_disks 20 --view_name a3ch --a4c_offset 20 --simpson_type 0 1 2 --ptsz_disp 2 --verbose --export_pkl`
 
 **Note** The output data is only saved when given the `--export_pkl` option.
 
 
 * To run all 3 populations, with both apical-2 and 3 chamber views:
 
-`python D://simpsonsvolume_github//create_dataset.py --output_dir D:/simpsonsvolume_github/output/ --vtk_mesh_dir D:/simpsonsvolume_github/meshes/ --nodelabels_dir D:/phdcoding/LVMeshes/meta_data/ --rv_path D:/phdcoding/LVMeshes/CTData/DATA/Orientations3D/ --dataset_type UKBB YHC HFC --num_disks 20 --view_name a3ch a2ch --a4c_offset 20 --simpson_type 0 1 2 --ptsz_disp 2 --verbose --export_pkl`
+`python ../create_dataset.py --output_dir ../output/ --vtk_mesh_dir ../meshes/ --nodelabels_dir ../meta_data/ --rv_path ../Orientations3D/ --dataset_type UKBB YHC HFC --num_disks 20 --view_name a3ch a2ch --a4c_offset 20 --simpson_type 0 1 2 --ptsz_disp 2 --verbose --export_pkl`
 
 
 * We provide data visualization functions to analyze LV volume estimates as well as additional anatomical metrics such as LV eccentricity, basal slanting and orientation angle. To run the data visualization pipeline:
 
-`python D://simpsonsvolume_github//visualize_data.py --data_dir D:/simpsonsvolume_github/output/ --plot_mu --plot_Am --plot_bs`
+`python ../visualize_data.py --data_dir ../output/ --img_dir ../Heart_normal_short_axis_section.jpg --plot_mu --plot_Am --plot_bs`
 
 
 
