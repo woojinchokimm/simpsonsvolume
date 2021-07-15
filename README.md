@@ -113,7 +113,7 @@ The main script for generating data is `create_dataset.py`. Options are controll
 
 `python ../create_dataset.py --output_dir ../output/ --vtk_mesh_dir ../meshes/ --nodelabels_dir ../meta_data/ --rv_path ../Orientations3D/ --dataset_type UKBB --num_disks 20 --view_name a3ch --a4c_offset 20 --simpson_type 0 1 2 --ptsz_disp 2 --verbose --export_pkl`
 
-**Note** The output data is only saved when given the `--export_pkl` option.
+**Note** The output data is only saved when given the `--export_pkl` option. `--debug` option provides visualization at specific stages of the pipeline.
 
 
 * To run all 3 populations, with both apical-2 and 3 chamber views:
