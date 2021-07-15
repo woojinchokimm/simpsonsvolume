@@ -6,7 +6,7 @@
 * a young population (preterm) 
 * an elderly heart failure population.
 
-This project aims to estimate left ventricular volumes using 3 different interpretations of **Simpson's bi-plane rule (SBR) **:
+This project aims to estimate left ventricular volumes using 3 different interpretations of **Simpson's bi-plane rule (SBR)**:
 
 Step 1: Apical-view generation
 Step 2: Parallel landmark extraction 
