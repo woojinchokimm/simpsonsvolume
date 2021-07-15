@@ -1,6 +1,6 @@
 ## Overview
 
-**simpsonsvolume** is a toolbox used for volumetric analysis of 3D anatomical meshes of the **left ventricle**. The meshes are reconstructed a retrospective cohort representative of:
+**simpsonsvolume** is a toolbox used for volumetric analysis of 3D anatomical meshes of the **left ventricle**. The meshes are reconstructed from a retrospective cohort representative of:
 
 * an adult population [UK Biobank Imaging Study](http://imaging.ukbiobank.ac.uk/)
 * a young population (preterm) 
