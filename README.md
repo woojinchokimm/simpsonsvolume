@@ -42,42 +42,25 @@ root
 │   
 └───meshes
 │   │
-│   └───UKBB_meshes
+│   └──xxx_meshes (population: UKBB, YHC, HFC)
 │       │   Case1.vtk
 │       │   Case2.vtk
 │       │   ...
 │       │   anomaly.txt
 │       │   apex_manual.txt
 │       │   apex_nodes.txt
- 
-│   └───YHC_meshes
-│       │   ...
-   
-│   └───HFC_meshes
-│       │   ...
 │    
 └───output
-│   └───UKBB_meshes (population 1)
-│       └───BOD (method 1)
-│          └───90
+│   └───xxx_meshes (population: UKBB, YHC, HFC)
+│       └───xxx (method: BOD, TBC, SBR)
+│          └───xx (viewing angle: 90, 60)
 |              |  Case1_data_dict.pkl
 |              |  Case2_data_dict.pkl
 |              | ...
-
-│          └───60
-|              | ...  
-
-│       └───TBC (method 2)
-|           | ...
-
-│       └───SBR (method 3)
-|           | ...
-
-│   └───YHC_meshes (population 2)
-|           | ...
-
-│   └───HFC_meshes (population 3)
-|           | ...
+│   
+└───options 
+│   │
+│   └──export_config.py
 ```
 
 
