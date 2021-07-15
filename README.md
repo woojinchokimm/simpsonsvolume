@@ -95,20 +95,3 @@ The main script for generating data is `create_dataset.py`. Options are controll
 * To run all 3 populations, with both apical-2 and 3 chamber views:
 `python D://simpsonsvolume_github//create_dataset.py --output_dir D:/simpsonsvolume_github/output/ --vtk_mesh_dir D:/simpsonsvolume_github/meshes/ --nodelabels_dir D:/phdcoding/LVMeshes/meta_data/ --rv_path D:/phdcoding/LVMeshes/CTData/DATA/Orientations3D/ --dataset_type UKBB YHC HFC --num_disks 20 --view_name a3ch a2ch --a4c_offset 20 --simpson_type 0 1 2 --ptsz_disp 2 --verbose --export_pkl`
 
-
-
-
-
-
-
-
-
-
-
-```
-python3 demo_pipeline.py
-```
-
-
-
-
