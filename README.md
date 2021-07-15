@@ -84,17 +84,30 @@ The main script for generating data is `create_dataset.py`. Options are controll
 
 1. **General options**: These options include parameters such as the location of the vtk mesh files and the output directory, which population to use, what view (slice) should be extracted, which Simpson's interpretation to use, number of Simpson's disks, and some additional parameters. An overview of these parameters can be seen by running `create_dataset.py -h` or looking at the argument parser defined in `export_config.py`.
 2. **Data-specific options**: There may be cases where several parameters need to be defined for a given dataset. For example in each dataset, the endo- and epicardium apex node indices are fixed, but there are certain cases which need manual indexing or are excluded all-together. These parameters can be manually set in the `apex_nodes.txt`, `apex_manual.txt` and `anomaly.txt` files.
+3. **Pipeline flow options**: These are options to skip certain subsections of the vtk pipeline (useful if data has already been calculated and stored):
+  * `--exclude_landmarks`: Skips through the apical view generation and landmarks extraction process. 
+  * `--exclude_volume`: Skips through the Simpson's volume estimation. 
+  * `--exclude_mesh_traits`: Skips through the calculation of LV specific traits (e.g. cross-sectional eccentricity).
+  * `--exclude_eccent_profile`: Skips through the plots of eccentricity profiles.
 
+**Note** When skipping subsections, the required data for subsequent pipelines are loaded from the already existing data in `--output_dir`.
 ## Run from terminal
 
 * To run the UKBB population with the apical-3 chamber view:
 
 `python D://simpsonsvolume_github//create_dataset.py --output_dir D:/simpsonsvolume_github/output/ --vtk_mesh_dir D:/simpsonsvolume_github/meshes/ --nodelabels_dir D:/phdcoding/LVMeshes/meta_data/ --rv_path D:/phdcoding/LVMeshes/CTData/DATA/Orientations3D/ --dataset_type UKBB --num_disks 20 --view_name a3ch --a4c_offset 20 --simpson_type 0 1 2 --ptsz_disp 2 --verbose --export_pkl`
 
-**Note** The output data is only saved when given `--export_pkl` option.
+**Note** The output data is only saved when given the `--export_pkl` option.
+
 
 * To run all 3 populations, with both apical-2 and 3 chamber views:
 
-
 `python D://simpsonsvolume_github//create_dataset.py --output_dir D:/simpsonsvolume_github/output/ --vtk_mesh_dir D:/simpsonsvolume_github/meshes/ --nodelabels_dir D:/phdcoding/LVMeshes/meta_data/ --rv_path D:/phdcoding/LVMeshes/CTData/DATA/Orientations3D/ --dataset_type UKBB YHC HFC --num_disks 20 --view_name a3ch a2ch --a4c_offset 20 --simpson_type 0 1 2 --ptsz_disp 2 --verbose --export_pkl`
+
+
+* We provide data visualization functions to analyze LV volume estimates as well as additional anatomical metrics such as LV eccentricity, basal slanting and orientation angle. To run the data visualization pipeline:
+
+`python D://simpsonsvolume_github//visualize_data.py --data_dir D:/simpsonsvolume_github/output/ --plot_mu --plot_Am --plot_bs`
+
+
 
