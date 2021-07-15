@@ -12,10 +12,10 @@
 
 This project aims to estimate left ventricular volumes using 3 different interpretations of **Simpson's bi-plane rule (SBR)**:
 
-Step 1: Apical-view generation
-Step 2: Parallel landmark extraction 
-Step 3: Simpson's disk formation
-Step 4: Final volume calculation
+ Step 1: Apical-view generation
+ Step 2: Parallel landmark extraction 
+ Step 3: Simpson's disk formation
+ Step 4: Final volume calculation
 
 **Note** This repository only contains the code, not the imaging data. The meshes have been made publicly available here: dx.doi.org/10.6084/m9.figshare.14933463
 
