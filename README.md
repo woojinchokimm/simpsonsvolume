@@ -89,6 +89,10 @@ The input is a collection of vtk anatomical (LV) meshes with node correspondence
   * the vertex indices of the endo- and epicardium layers of the LV
   * the vertex indices of the inner- and outer-rim of the LV base.
  
+<p align="center">
+<img src=docs/epi_endo.png width="750">
+</p>
+ 
 **Note** If using our publicly available cohort, the RV directions are already built-in and require only the Orientations3D folder path in the `--rv_path` option.
 ## Options
 
