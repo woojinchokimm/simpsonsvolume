@@ -17,9 +17,9 @@ This project aims to estimate left ventricular volumes using 3 different interpr
 4. Final volume calculation
 
 <p float="left">
-  <img src="docs/fig1A.png" width="100" />
-  <img src="docs/3methods2.png" width="100" /> 
-  <img src="docs/Table4.png" width="100" />
+  <img src="docs/fig1A.png" width="350" />
+  <img src="docs/3methods2.png" width="400" /> 
+  <img src="docs/Table4.png" width="300" />
 </p>
 
 **Note** This repository only contains the code, not the imaging data. The meshes have been made publicly available here: dx.doi.org/10.6084/m9.figshare.14933463
