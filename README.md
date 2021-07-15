@@ -16,10 +16,9 @@ This project aims to estimate left ventricular volumes using 3 different interpr
 3. Simpson's disk formation
 4. Final volume calculation
 
-<p align="left">
+<p align="center">
   <img src="docs/fig1A.png" width="210" />
   <img src="docs/3methods2.png" width="350" /> 
-  <img src="docs/Table4.png" width="350" />
 </p>
 
 <p align="center">
