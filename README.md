@@ -1,10 +1,17 @@
 ## Overview
 
-**simpsonsvolume** is a toolbox used for volumetric analysis of 3D anatomical meshes of the left ventricle using different interpretations of the **Simpson's bi-plane rule**. The meshes are reconstructed a retrospective cohort representative of:
+**simpsonsvolume** is a toolbox used for volumetric analysis of 3D anatomical meshes of the **left ventricle**. The meshes are reconstructed a retrospective cohort representative of:
 
 * an adult population [UK Biobank Imaging Study](http://imaging.ukbiobank.ac.uk/)
 * a young population (preterm) 
 * an elderly heart failure population.
+
+This project aims to estimate left ventricular volumes using 3 different interpretations of **Simpson's bi-plane rule (SBR) **:
+
+Step 1: Apical-view generation
+Step 2: Parallel landmark extraction 
+Step 3: Simpson's disk formation
+Step 4: Final volume calculation
 
 **Note** This repository only contains the code, not the imaging data. The meshes have been made publicly available [here](dx.doi.org/10.6084/m9.figshare.14933463).
 
@@ -25,9 +32,9 @@ The most convenient way to install these libraries is to use pip3 (or pip for Py
 pip3 install numpy scipy matplotlib pandas vtk vg
 ```
 
-## Usage
+## Input/Output Structure
 
-**Data preparation** There is a directory named *data*, which contains the scripts for preparing the training dataset. For a machine learning project, data preparation step including acquisition, cleaning, format conversion etc normally takes at least the same amount of your time and headache, if nor more, as the machine learning step. But this is a crucial part, as all the following work (your novel machine learning ideas) needs the data.
+The format of the datastructure must follow the tree outlined below as all the following data visuzalition work requires this specific format.
 
 ```
 root
@@ -63,6 +70,22 @@ root
 │   └──export_config.py
 ```
 
+## Usage
+
+The main script for generating data is `create_dataset.py`. Options are controlled at several different levels:
+
+1. **General options**: These options include parameters such as the location of the vtk mesh files and the output directory, which population to use, what view (slice) should be extracted, which Simpson's interpretation to use, number of Simpson's disks, and some additional parameters. An overview of these parameters can be seen by running `create_dataset.py -h` or looking at the argument parser defined in `export_config.py`.
+2. **Input**: The input is a collection of vtk anatomical (LV) meshes with node correspondence. The meta-data must include:
+  * the direction of the right ventricle (RV) or the location of the centre-of-mass (COM) of the RV (for A4C view acquisition)
+  * the vertex indices of the endo- and epicardium layers of the LV
+  * the vertex indices of the inner- and outer-rim of the LV base.
+3. **Data-specific options**: There may be cases where several parameters need to be defined for a given dataset. For example in each dataset, the endo- and epicardium apex node indices are fixed, but there are certain cases which need manual indexing or are excluded all-together. These parameters can be manually set in the `apex_nodes.py`, `apex_manual.py` and `anomaly.py`.
+
+
+
+```
+python3 demo_pipeline.py
+```
 
 
 
