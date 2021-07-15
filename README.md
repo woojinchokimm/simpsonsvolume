@@ -22,7 +22,7 @@ This project aims to estimate left ventricular volumes using 3 different interpr
 </p>
 
 <p align="center">
-  <img src="docs/Table4.png" width="350" />
+  <img src="docs/Table4.png" width="200" />
 </p>
 
 **Note** This repository only contains the code, not the imaging data. The meshes have been made publicly available here: dx.doi.org/10.6084/m9.figshare.14933463
@@ -125,5 +125,9 @@ The main script for generating data is `create_dataset.py`. Options are controll
 
 `python ../visualize_data.py --data_dir ../output/ --img_dir ..docs/Heart_normal_short_axis_section.jpg --plot_mu --plot_Am --plot_bs`
 
+<p align="center">
+<img src=docs/HC_ellipticity2.png width="250">
+<img src=docs/BOD_plot.png width="250">
+</p>
 
 
