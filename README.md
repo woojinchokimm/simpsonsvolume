@@ -25,7 +25,7 @@ This project aims to estimate left ventricular volumes using 3 different interpr
   <img src="docs/Table4.png" width="300" />
 </p>
 
-**Note** This repository only contains the code, not the imaging data. The meshes have been made publicly available here: dx.doi.org/10.6084/m9.figshare.14933463
+**Note** This repository only contains the code, not the imaging data. **The meshes have been made publicly available here: dx.doi.org/10.6084/m9.figshare.14933463**
 
 ## Installation
 
