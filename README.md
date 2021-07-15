@@ -107,7 +107,7 @@ The main script for generating data is `create_dataset.py`. Options are controll
 
 * We provide data visualization functions to analyze LV volume estimates as well as additional anatomical metrics such as LV eccentricity, basal slanting and orientation angle. To run the data visualization pipeline:
 
-`python ../visualize_data.py --data_dir ../output/ --img_dir ../Heart_normal_short_axis_section.jpg --plot_mu --plot_Am --plot_bs`
+`python ../visualize_data.py --data_dir ../output/ --img_dir ..docs/Heart_normal_short_axis_section.jpg --plot_mu --plot_Am --plot_bs`
 
 
 
