@@ -30,22 +30,54 @@ pip3 install numpy scipy matplotlib pandas vtk vg
 **Data preparation** There is a directory named *data*, which contains the scripts for preparing the training dataset. For a machine learning project, data preparation step including acquisition, cleaning, format conversion etc normally takes at least the same amount of your time and headache, if nor more, as the machine learning step. But this is a crucial part, as all the following work (your novel machine learning ideas) needs the data.
 
 ```
-project
-│   README.md
-│   file001.txt    
+root
+│   README.md  
 │
-└───folder1
-│   │   file011.txt
-│   │   file012.txt
-│   │
-│   └───subfolder1
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
+└───data_handlers
+│   │   data_viz.py
+│   │   heart.py
+│   │   rv_dir_.py
+│   │   vtkfunctions.py
+│   │   vtkslicer.py
 │   
-└───folder2
-    │   file021.txt
-    │   file022.txt
+└───meshes
+│   │
+│   └───UKBB_meshes
+│       │   Case1.vtk
+│       │   Case2.vtk
+│       │   ...
+│       │   anomaly.txt
+│       │   apex_manual.txt
+│       │   apex_nodes.txt
+ 
+│   └───YHC_meshes
+│       │   ...
+   
+│   └───HFC_meshes
+│       │   ...
+│    
+└───output
+│   └───UKBB_meshes (population 1)
+│       └───BOD (method 1)
+│          └───90
+|              |  Case1_data_dict.pkl
+|              |  Case2_data_dict.pkl
+|              | ...
+
+│          └───60
+|              | ...  
+
+│       └───TBC (method 2)
+|           | ...
+
+│       └───SBR (method 3)
+|           | ...
+
+│   └───YHC_meshes (population 2)
+|           | ...
+
+│   └───HFC_meshes (population 3)
+|           | ...
 ```
 
 
