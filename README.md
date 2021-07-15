@@ -17,8 +17,11 @@ This project aims to estimate left ventricular volumes using 3 different interpr
 4. Final volume calculation
 
 <p float="left">
-  <img src="docs/fig1A.png" width="200" />
+  <img src="docs/fig1A.png" width="210" />
   <img src="docs/3methods2.png" width="350" /> 
+</p>
+
+<p float="center">
   <img src="docs/Table4.png" width="350" />
 </p>
 
